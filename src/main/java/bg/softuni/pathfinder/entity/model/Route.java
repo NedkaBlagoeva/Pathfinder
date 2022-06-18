@@ -3,6 +3,7 @@ package bg.softuni.pathfinder.entity.model;
 import bg.softuni.pathfinder.entity.model.enums.LevelEnum;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "routes")
@@ -17,10 +18,16 @@ public class Route extends BaseEntity{
     @Column(nullable = false, unique = true)
     private String name;
 
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
     @ManyToOne
     private User author;
 
     private String videoUrl;
+
+    @ManyToMany
+    private Set<Category> categories;
 
     public String getGpxCoordinates() {
         return gpxCoordinates;
@@ -46,6 +53,14 @@ public class Route extends BaseEntity{
         this.name = name;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public User getAuthor() {
         return author;
     }
@@ -60,5 +75,13 @@ public class Route extends BaseEntity{
 
     public void setVideoUrl(String videoUrl) {
         this.videoUrl = videoUrl;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
+    }
+
+    public void setCategories(Set<Category> categories) {
+        this.categories = categories;
     }
 }

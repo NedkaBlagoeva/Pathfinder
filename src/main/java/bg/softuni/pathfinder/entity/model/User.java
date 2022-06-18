@@ -21,7 +21,7 @@ public class User extends BaseEntity {
     @Column(nullable = false)
     private String fullName;
 
-    @Column(unique = true, nullable = false)
+    @Column(unique = true)
     private String email;
 
     @ManyToMany

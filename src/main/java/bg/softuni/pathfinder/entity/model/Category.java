@@ -15,9 +15,6 @@ public class Category extends BaseEntity{
     @Column(columnDefinition = "TEXT")
     private String description;
 
-    @ManyToMany
-    private Set<Route> routes;
-
     public EngineEnum getName() {
         return name;
     }
