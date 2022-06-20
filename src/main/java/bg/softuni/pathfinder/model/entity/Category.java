@@ -1,9 +1,8 @@
-package bg.softuni.pathfinder.entity.model;
+package bg.softuni.pathfinder.model.entity;
 
-import bg.softuni.pathfinder.entity.model.enums.EngineEnum;
+import bg.softuni.pathfinder.model.enums.EngineEnum;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
 @Table(name = "categories")

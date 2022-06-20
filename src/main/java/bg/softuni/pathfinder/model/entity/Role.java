@@ -1,6 +1,6 @@
-package bg.softuni.pathfinder.entity.model;
+package bg.softuni.pathfinder.model.entity;
 
-import bg.softuni.pathfinder.entity.model.enums.UserRoleEnum;
+import bg.softuni.pathfinder.model.enums.UserRoleEnum;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
